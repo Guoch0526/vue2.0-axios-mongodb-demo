@@ -1,57 +1,61 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import index from '@/components/index/index'
-import newHouse from '@/components/newHouse/newHouse'
-import ershou from '@/components/ershou/ershou'
-import newsHome from '@/components/newsHome/newsHome'
-import newHouseDetail from '@/components/newHouseDetail/newHouseDetail'
-import oldHouseDetail from '@/components/oldHouseDetail/oldHouseDetail'
-import newsHomeDetail from '@/components/newsHomeDetail/newsHomeDetail'
-
-Vue.use(Router)
-
-export default new Router({
+export default {
   routes: [
     {
       path: '/',                //默认路由
       name: 'index',
-      component: index
+      component (resolve) {
+        require(['../components/index/index'], resolve)
+      }
     },
     {
       path: '/index/:city',
       name: 'index',
-      component: index
+      component (resolve) {
+        require(['../components/index/index'], resolve)
+      }
     },
     {
       path: '/newHouse/:city',
       name: 'newHouse',
-      component: newHouse
+      component (resolve) {
+        require(['../components/newHouse/newHouse'], resolve)
+      }
     },
     {
       path: '/ershou/:city',
       name: 'ershou',
-      component: ershou
+      component (resolve) {
+        require(['../components/ershou/ershou'], resolve)
+      }
     },
     {
       path: '/newsHome/:city',
       name: 'newsHome',
-      component: newsHome
+      component (resolve) {
+        require(['../components/newsHome/newsHome'], resolve)
+      }
     },
     {
       path: '/newHouseDetail/:city/:id',
       name: 'newHouseDetail',
-      component: newHouseDetail
+      component (resolve) {
+        require(['../components/newHouseDetail/newHouseDetail'], resolve)
+      }
     },
     {
       path: '/oldHouseDetail/:city/:id',
       name: 'oldHouseDetail',
-      component: oldHouseDetail
+      component (resolve) {
+        require(['../components/oldHouseDetail/oldHouseDetail'], resolve)
+      }
     },
     {
       path: '/newsHomeDetail/:city/:id',
       name: 'newsHomeDetail',
-      component: newsHomeDetail
+      component (resolve) {
+        require(['../components/newsHomeDetail/newsHomeDetail'], resolve)
+      }
     }
   ],
   linkActiveClass: 'is-active'
-})
+}
