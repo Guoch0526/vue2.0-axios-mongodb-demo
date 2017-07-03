@@ -1,5 +1,5 @@
 # vue2.0-axios-mongodb-demo
-基于vue2.0、node.js、ElementUI、mongodb、axios搭建的一个小demo
+基于vue2.0、node.js、ElementUI、mongodb、axios搭建的一个demo
 #### 简介
  1、本项目所使用的技术主要有vue2.0、ElementUI、mongodb、axios、mongooes；
  
